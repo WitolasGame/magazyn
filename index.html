@@ -2,102 +2,101 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Sekcja logowania -->
+  <!-- Sekcja logowania -->
 
-    <main id="login-screen" class="card">
-        <h2>Logowanie</h2>
-        <form id="formularz-logowania">
-            <div class="formularz">
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="adres@domena.pl" required>
-            </div>
-            <div class="formularz">
-                <label for="password">Hasło:</label>
-                <input type="password" id="password" placeholder="••••••••" required>
-            </div>
+  <main id="login-screen" class="card">
+    <h2>Logowanie</h2>
+    <form id="formularz-logowania">
+      <div class="formularz">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="adres@domena.pl" required>
+      </div>
+      <div class="formularz">
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
 
-            <button type="submit" id="login-button">Zaloguj</button>
-        </form>
-        <p>made with 🩶 by Witold Olszewski</p>
-    </main>
+      <button type="submit" id="login-button">Zaloguj</button>
+    </form>
+    <p>made with 🩶 by Witold Olszewski</p>
+  </main>
 
-    <!-- Sekcja aplikacji (ukryta domyślnie) -->
+  <!-- Sekcja aplikacji (ukryta domyślnie) -->
 
-    <main id="aplikacja" class="hidden">
+  <main id="aplikacja" class="hidden">
 
-        <header class="top-bar">
-            <div>
-                <span>Drużyna:</span>
-                <strong id="display-druzyna">---</strong>
-            </div>
-            <button id="logout-button" class="button-secondary">Wyloguj</button>
-        </header>
+    <header class="top-bar">
+      <div class="user-info">
+        <span>Drużyna:</span>
+        <strong id="display-druzyna">---</strong>
+      </div>
+      <button id="logout-button" class="button-secondary">Wyloguj</button>
+    </header>
 
-        <section class="card">
-            <h3>Dodaj nowy przedmiot</h3>
-            <form id="add-item-form" class="grid-form">
-                <div class="formularz">
-                    <label for="item-id">ID Przedmiotu</label>
-                    <input type="text" id="item-id" placeholder="np. 1" required>
-                </div>
-                <div class="formularz">
-                    <label for="item-name">Nazwa Przedmiotu</label>
-                    <input type="text" id="item-name" placeholder="np. Miecz świetlny" required>
-                </div>
-                <div class="formularz">
-                    <label for="item-unit">Jednostka</label>
-                    <select id="item-unit" required>
-                        <option value="szt." selected>szt.</option>
-                        <option value="kg">kg</option>
-                        <option value="l">l</option>
-                        <option value="butelki">butelki</option>
-                        <option value="pudełka">pudełka</option>
-                        <option value="zgrzewki">zgrzewki</option>
-                        <option value="op.">opakowania (op.)</option>
-                    </select>
-                </div>
-                <div class="formularz">
-                    <label for="item-quantity">Ilość</label>
-                    <input type="number" id="item-quantity" placeholder="np. 10" min="1" required>
-                </div>
-                <button type="submit">Dodaj Przedmiot</button>
-            </form>
-        </section>
+    <section class="card">
+      <h3>Dodaj nowy przedmiot</h3>
+      <form id="add-item-form" class="grid-form">
+        <div class="formularz">
+          <label for="item-id">ID Przedmiotu</label>
+          <input type="text" id="item-id" placeholder="np. 1" required>
+        </div>
+        <div class="formularz">
+          <label for="item-name">Nazwa Przedmiotu</label>
+          <input type="text" id="item-name" placeholder="np. Miecz świetlny" required>
+        </div>
+        <div class="formularz">
+          <label for="item-unit">Jednostka</label>
+          <select id="item-unit" required>
+            <option value="szt." selected>szt.</option>
+            <option value="kg">kg</option>
+            <option value="l">l</option>
+            <option value="butelki">butelki</option>
+            <option value="pudełka">pudełka</option>
+            <option value="zgrzewki">zgrzewki</option>
+            <option value="op.">opakowania (op.)</option>
+          </select>
+        </div>
+        <div class="formularz">
+          <label for="item-quantity">Ilość</label>
+          <input type="number" id="item-quantity" placeholder="np. 10" min="1" required>
+        </div>
+        <button type="submit">Dodaj Przedmiot</button>
+      </form>
+    </section>
 
-        <section class="card"
-            <h3>Stan magazynu</h3>
-            <div class="table-container">
-                <table id="inventory-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nazwa</th>
-                            <th>Jednostka</th>
-                            <th>Ilość</th>
-                        </tr>
-                    </thead>
-                    <!-- Tutaj skrypt JS wstawia wiersze z danymi z Firestore -->
-                    <tbody id="inventory-list">
-                        <tr>
-                            <td colspan="4">Brak danych w magazynie</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <section class="card" <h3>Stan magazynu</h3>
+      <div class="table-container">
+        <table id="inventory-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nazwa</th>
+              <th>Jednostka</th>
+              <th>Ilość</th>
+            </tr>
+          </thead>
+          <!-- Tutaj skrypt JS wstawia wiersze z danymi z Firestore -->
+          <tbody id="inventory-list">
+            <tr>
+              <td colspan="4">Brak danych w magazynie</td>
+            </tr>
+          </tbody>
+        </table>
 
-            </div>
-            <p>made with 🩶 by Witold Olszewski</p>
-    </main>
+      </div>
+      <p>made with 🩶 by Witold Olszewski</p>
+  </main>
 
 
-    <script type="module" src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>

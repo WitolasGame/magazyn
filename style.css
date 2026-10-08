@@ -7,7 +7,7 @@
 
 /* Tło strony i wyśrodkowanie głównej zawartości */
 body {
-  background-color: #f4f6f9;
+  background-color: #0D0F0C;
   color: #333;
   display: flex;
   justify-content: center;
@@ -25,24 +25,25 @@ body {
 
 /* Karta / Kontener z białym tłem i cieniem */
 .card {
-  background: #ffffff;
+  background: #141812;
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 12px 32px rgba(0, 0, 0, 0.18);
   width: 100%;
   max-width: 750px;
   margin-bottom: 20px;
+  color: #E8E9E3;
 }
 
 label {
   font-size: 13px;
   font-weight: 600;
-  color: #555;
+  color: #A5AA9B;
   margin-bottom: 4px;
 }
 
 h2, h3 {
-  color: #1b5e20; /* Zielony akcent */
+  color: #E8E9E3; /* Zielony akcent */
   margin-bottom: 16px;
 }
 
@@ -56,7 +57,7 @@ input, select {
 
 /* Efekt zaznaczenia pola formularza */
 input:focus, select:focus {
-  border-color: #2e7d32;
+  border-color: #30372A;
 }
 
 /* Przyciski */
@@ -92,11 +93,15 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: #1A1F17;
   padding: 14px 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.user-info {
+  color: #E8E9E3;
 }
 
 /* Tabela z danymi */
