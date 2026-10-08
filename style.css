@@ -143,3 +143,10 @@ th {
     grid-column: span 1;
   }
 }
+
+p{
+  font-size: 10px;
+  color: #888;
+  text-align: right;
+  margin-top: 20px;
+}
